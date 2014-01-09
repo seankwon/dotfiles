@@ -1,0 +1,153 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/seankwon/code/latex/" . "resume/")
+ ("/home/seankwon/code/cCode/" . "9ch/")
+ ("/home/seankwon/code/rubies/" . "webserver/")
+ ("/home/seankwon/code/clojures/leins/euler/src/" . "euler/")
+ ("/home/seankwon/code/clojures/leins/euler/" . "src/")
+ ("/home/seankwon/code/clojures/leins/data-structs/src/" . "data_structs/")
+ ("/home/seankwon/code/clojures/leins/data-structs/" . "src/")
+ ("/home/seankwon/code/clojures/leins/" . "euler/")
+ ("/home/seankwon/code/gitPlayground/4clojure/src/" . "foreclojure/")
+ ("/home/seankwon/code/gitPlayground/4clojure/" . "src/")
+ ("/home/seankwon/code/javascripts/" . "projects/")
+ ("/home/seankwon/code/gitPlayground/payroll/public/" . "javascripts/")
+ ("/home/seankwon/code/gitPlayground/payroll/" . "public/")
+ ("/home/seankwon/code/gitPlayground/" . "4clojure/")
+ ("/home/seankwon/code/cPlusPlus/cPrimer/" . "stringbad/")
+ ("/home/seankwon/code/cPlusPlus/" . "cPrimer/")
+ ("/home/seankwon/code/pythons/" . "prac_files/")
+ ("/home/seankwon/code/data-structures/Assignment7/" . "Assignment7/")
+ ("/home/seankwon/code/data-structures/" . "Assignment7/")
+ ("/home/seankwon/.emacs.d/" . "modules/")
+ ("/home/seankwon/code/clojures/practice/prac_project/src/" . "prac_project/")
+ ("/home/seankwon/code/clojures/practice/prac_project/" . "src/")
+ ("/home/seankwon/code/clojures/practice/" . "prac_project/")
+ ("/home/seankwon/code/clojures/" . "leins/")
+ ("/home/seankwon/code/" . "clojures/")
+ ("/home/seankwon/" . "code/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/seankwon/code/clojures/leins/euler/src/euler/"
+ "/home/seankwon/code/pythons/prac_files/"
+ "/home/seankwon/code/latex/resume/"
+ "/home/seankwon/code/cCode/9ch/"
+ "/home/seankwon/code/rubies/webserver/"
+ "/home/seankwon/code/rubies/"
+ "/home/seankwon/code/clojures/practice/prac_project/src/prac_project/"
+ "/home/seankwon/code/clojures/leins/data-structs/src/data_structs/"
+ "/home/seankwon/.emacs.d/"
+ "/home/seankwon/code/gitPlayground/4clojure/src/foreclojure/"
+ "/home/seankwon/code/clojures/practice/prac_project/"
+ "/home/seankwon/code/gitPlayground/payroll/public/javascripts/"
+ "/home/seankwon/code/cPlusPlus/cPrimer/stringbad/"
+ "/home/seankwon/code/data-structures/Assignment7/Assignment7/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "problems-2.clj"
+ "sieve.py"
+ "problems-1.clj"
+ "resume.tex"
+ "largest.c"
+ "copyArr.c"
+ "webserver.rb"
+ "fibP.rb"
+ "exercise2.py"
+ "exercise.clj"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/seankwon/code/clojures/leins/euler/src/euler/" (21187 16905 138106 313000) "core.clj" "problems-1.clj" "../" ".#problems-2.clj" "./" "problems-2.clj")
+
+ ("/home/seankwon/code/clojures/leins/euler/" (21184 58138 36737 493000) "target/" "resources/" "README.md" "../" ".git/" "test/" ".gitignore" ".lein-repl-history" "doc/" "src/" "LICENSE" "./" "project.clj")
+
+ ("/home/seankwon/" (21185 48622 522894 357000) ".goutputstream-N0AQ3W" ".bashrc" ".mission-control/" ".goutputstream-14VO2W" ".goutputstream-GQU25W" ".goutputstream-P59G3W" "google_appengine/" "Downloads/" ".goutputstream-S2K32W" ".goutputstream-HA2X4W" ".node-gyp/" ".goutputstream-WD7P4W" ".scala_history" ".guard_history" ".goutputstream-T5YG3W" ".goutputstream-1ISL7W" ".goutputstream-PHM03W" ".goutputstream-FF723W" ".goutputstream-WXGK5W" ".nvm/" ".goutputstream-XT7H3W" ".goutputstream-ELXK3W" "redis-2.6.16/" ".goutputstream-PGIE3W" ".goutputstream-FAQP8W" ".gegl-0.0/" ".goutputstream-1ET34W" ".pulse-cookie" ".npm/" ".goutputstream-4SXN2W" ".emacs.d/" ".goutputstream-8U4K4W" ".goutputstream-IO9D4W" ".goutputstream-YW0Z3W" ".fontconfig/" ".goutputstream-KVHF5W" ".goutputstream-TW1H3W" ".goutputstream-FQQ35W" ".goutputstream-VGWV7W" ".subversion/" ".goutputstream-S5M63W" ".goutputstream-2FW95W" ".goutputstream-ET863W" ".Skype/" ".goutputstream-ES9V3W" ".netrc" ".goutputstream-YB3F5W" "node/" ".goutputstream-27KF7W" ".goutputstream-J4S72W" ".viminfo" ".goutputstream-JLJR4W" ".goutputstream-6U1H3W" ".goutputstream-Y0GL3W" ".goutputstream-ZW993W" ".goutputstream-LR7B3W" ".goutputstream-0WBD4W" ".goutputstream-EXKB3W" ".goutputstream-HIEP5W" "code/" ".goutputstream-E0D17W" ".goutputstream-AZID2W" ".goutputstream-12PI3W" ".goutputstream-Z2302W" ".goutputstream-LFGQ2W" ".goutputstream-RWPP3W" ".goutputstream-AICN5W" ".goutputstream-IVTM4W" "Music/" ".goutputstream-P6U33W" ".gimp-2.6/" ".goutputstream-E8XK3W" ".rvm/" ".psql_history" ".eshell/" ".goutputstream-KRNL8W" ".goutputstream-OKRP2W" ".goutputstream-Y6BW7W" ".goutputstream-0ZAL4W" ".goutputstream-RK5O2W" ".goutputstream-SWFM2W" ".goutputstream-8VWQ4W" ".goutputstream-XLC64W" ".filezilla/" "Pictures/" ".goutputstream-S6IE4W" ".dropbox/" ".goutputstream-4LP36W" ".goutputstream-6FQ04W" ".goutputstream-N62L2W" ".goutputstream-UQIJ3W" ".goutputstream-UCCV2W" ".goutputstream-HQH66W" ".goutputstream-E0W02W" ".goutputstream-U0TB3W" ".goutputstream-AZHA7W" ".goutputstream-6QPY7W" ".goutputstream-KDGT3W" ".goutputstream-IO6H4W" ".goutputstream-6OJ58W" ".asepriterc" ".goutputstream-VCZM3W" "Ubuntu One/" ".goutputstream-6QQX2W" ".goutputstream-MZ8R3W" ".goutputstream-WOQ04W" ".goutputstream-TAES5W" ".goutputstream-2WN32W" ".goutputstream-ED4K5W" "coverletter.txt" ".goutputstream-02AO3W" ".heroku/" ".m2/" ".goutputstream-GKLZ5W" ".goutputstream-6OCQ2W" ".goutputstream-33273W" ".goutputstream-F0YW3W" ".profile" ".goutputstream-046F3W" ".goutputstream-69L34W" "Documents/" ".goutputstream-FSW03W" "Public/" ".goutputstream-9KMD4W" ".goutputstream-PTSY6W" ".vimrc" ".pip/" ".goutputstream-SRWT3W" ".goutputstream-UZPS3W" ".goutputstream-I2202W" ".goutputstream-1QBX2W" ".fonts/" ".goutputstream-SUXN2W" ".goutputstream-2ERT8W" ".gem/" ".goutputstream-SJAX3W" ".gtk-bookmarks" ".goutputstream-N7L43W" ".goutputstream-TWZS2W" ".sqlite_history" ".goutputstream-CTXV3W" ".goutputstream-RX898W" ".goutputstream-RNKT2W" ".goutputstream-YL3P6W" ".gksu.lock" ".goutputstream-O4MV2W" ".goutputstream-FNAO3W" ".goutputstream-8UDB4W" ".recentf" ".goutputstream-6WIR2W" ".goutputstream-POFQ4W" ".goutputstream-2UOC4W" ".dbus/" ".goutputstream-RYUA7W" ".gstreamer-0.10/" ".goutputstream-VFVE3W" ".gnome2/" ".goutputstream-SR5C3W" ".goutputstream-0KLR6W" ".ssh/" ".goutputstream-ZHS86W" ".goutputstream-OW6B8W" "examples.desktop" ".lein/" ".pylint.d/" ".local/" ".gnome2_private/" ".goutputstream-DAPD4W" ".goutputstream-E0Y82W" ".goutputstream-AJR74W" ".goutputstream-U3183W" ".goutputstream-23454W" ".goutputstream-4KX74W" ".goutputstream-DFAI3W" ".goutputstream-5QQQ4W" ".goutputstream-75ZM4W" ".face" ".goutputstream-RWTM4W" ".goutputstream-O50U7W" ".goutputstream-0JW73W" ".goutputstream-EJXN3W" ".cache/" ".goutputstream-VTJZ2W" ".goutputstream-2JVC4W" ".goutputstream-Y6O83W" ".dbshell" ".goutputstream-7ZVM6W" ".goutputstream-K88T2W" ".goutputstream-UZRI5W" ".goutputstream-O5E04W" ".goutputstream-A2WE3W" ".thunderbird/" ".goutputstream-KT0X7W" ".thumbnails/" "Videos/" ".goutputstream-4JOT4W" ".goutputstream-BDY94W" ".goutputstream-FC6M3W" ".goutputstream-Z32Y3W" ".pki/" ".goutputstream-LM0W4W" ".goutputstream-NODM3W" ".goutputstream-NU3W2W" ".goutputstream-BYHU4W" ".goutputstream-J8YC3W" ".goutputstream-7EMS4W" ".goutputstream-Y1LP3W" ".gphoto/" ".goutputstream-XTWL4W" ".goutputstream-2O1V2W" ".goutputstream-SRLK4W" ".goutputstream-PI3F3W" ".xsession-errors" ".goutputstream-I2TP3W" ".dropbox-dist/" ".goutputstream-4XJ03W" ".goutputstream-9XUL3W" ".goutputstream-O3852W" ".goutputstream-WWO34W" ".config/" ".Xauthority" ".goutputstream-9KJ43W" ".goutputstream-ZO3B5W" ".goutputstream-UN993W" ".goutputstream-QBYZ1W" ".goutputstream-GNEE3W" ".mozilla/" ".goutputstream-RVAS3W" ".ICEauthority" ".goutputstream-LWXP3W" ".goutputstream-5K0E4W" ".gconf/" ".goutputstream-CDA84W" ".goutputstream-8QFW2W" "Templates/" ".goutputstream-42BZ3W" ".goutputstream-NY1G4W" ".goutputstream-N2K64W" ".zprofile" ".goutputstream-6CG23W" ".goutputstream-PPWC5W" ".goutputstream-4I9B3W" ".goutputstream-7U835W" "Dropbox/" ".goutputstream-ABBK3W" ".goutputstream-PLB12W" ".goutputstream-9Y0X2W" ".goutputstream-WML11W" ".appcfg_nag" ".goutputstream-NJ0Y6W" ".goutputstream-QLZB3W" ".bash_profile" ".goutputstream-CRW02W" "Desktop/" ".goutputstream-LYB56W" ".bash_history" ".goutputstream-J11E6W" ".goutputstream-5QLT6W" ".texmf-var/" ".goutputstream-ZGTR3W" ".goutputstream-HRF02W" ".goutputstream-PN1V6W" ".goutputstream-RK2W7W" "data/" ".goutputstream-FPMX3W" ".goutputstream-QXJ53W" ".goutputstream-5NYO3W" ".goutputstream-45JH3W" ".goutputstream-4JUN8W" ".goutputstream-L64U3W" ".goutputstream-GGY74W" ".goutputstream-UX7M6W" ".goutputstream-WYWW3W" ".goutputstream-9F3I7W" ".goutputstream-OP5R6W" ".gvfs/" ".goutputstream-LHJN5W" ".goutputstream-TBLB5W" ".goutputstream-L0M94W" ".goutputstream-68DI5W" ".dmrc" ".goutputstream-U6L61W" ".goutputstream-JJBT5W" ".goutputstream-IH9E3W" ".goutputstream-WFKK2W" ".gitconfig" ".goutputstream-P7745W" ".goutputstream-DGV24W" ".zshrc" ".pulse/" ".goutputstream-1APV5W" ".goutputstream-47EN3W" ".goutputstream-8QPE3W" ".goutputstream-EWK92W" ".bash_logout" ".goutputstream-T0TX2W" ".goutputstream-1D333W" ".goutputstream-CIQH6W" ".goutputstream-5FZU2W" ".goutputstream-IHLZ4W" ".goutputstream-A8V58W" ".goutputstream-AUCV4W" ".goutputstream-GFWS5W" ".goutputstream-B3CO4W" ".goutputstream-9QCL7W" ".saves/" ".goutputstream-PLVO5W" ".goutputstream-4M762W" ".vvvvvv/" ".goutputstream-OVYY7W" ".goutputstream-K9HH3W" ".ido.last" ".goutputstream-TJQY3W" ".xdvirc" ".goutputstream-J8SJ7W" ".irb-history" "SDL/" "tmp/" ".goutputstream-9K2C8W" ".goutputstream-GLYR2W" ".goutputstream-NXE62W" ".xsession-errors.old" ".goutputstream-205K3W" ".goutputstream-97WK3W" ".vim/" ".goutputstream-3SH82W" ".goutputstream-UZ4U2W" ".goutputstream-C55Z2W" ".goutputstream-AHS02W" "../" "./")
+
+ ("/home/seankwon/code/latex/" (21161 8376 233018 851000) "hw11/" "../" "hw8/" "hw10/" "hw5/" "hw3/" "./" "hw12/" "hw6/" "hw9/" "hw4/")
+
+ ("/home/seankwon/code/cCode/9ch/" (21085 63318 962653 80000) "lethead1.c" "ptr.c" "copyArr.c" "../" "day_mon3.c" "./" "largest.c")
+
+ ("/home/seankwon/code/cCode/" (21082 5517 587726 135000) "../" "9ch/" "./")
+
+ ("/home/seankwon/code/rubies/webserver/" (21133 47131 273601 301000) "webserver.rb" "../" "./" "index.html")
+
+ ("/home/seankwon/code/pythons/prac_files/" (21175 49663 886023 436000) "mysite/" "../" "exercise2.py" "exercise1.py" "./" "DJANGO_REFERENCE" "hello.py")
+
+ ("/home/seankwon/code/clojures/leins/euler/src/" (21177 5646 605766 205000) "../" "./" "euler/")
+
+ ("/home/seankwon/code/clojures/leins/" (21177 5662 345765 851000) "pedestal-app-tutorial/" "../" "prac_project/" "data-structs/" "./" "euler/")
+
+ ("/home/seankwon/code/clojures/practice/prac_project/src/prac_project/" (21175 13302 658696 425000) "exercise.clj" "core.clj" "ds.clj" "../" "./")
+
+ ("/home/seankwon/code/clojures/practice/prac_project/" (21175 13315 386696 615000) "target/" "resources/" "README.md" "../" "test/" ".gitignore" ".lein-repl-history" "doc/" "src/" "LICENSE" "./" "project.clj")
+
+ ("/home/seankwon/code/clojures/leins/data-structs/src/data_structs/" (21175 49409 330019 611000) "core.clj" "../" "./" "redBlackTree.clj")
+
+ ("/home/seankwon/code/clojures/leins/data-structs/" (21175 49410 658019 630000) "target/" "resources/" "README.md" "../" "test/" ".gitignore" "doc/" "src/" "LICENSE" "./" "project.clj")
+
+ ("/home/seankwon/code/pythons/prac_files/mysite/" (21175 49816 410025 727000) "db.sqlite3" "manage.py" "mysite/" "../" "./")
+
+ ("/home/seankwon/code/clojures/leins/data-structs/src/" (21175 13474 182699 3000) "../" "./" "data_structs/")
+
+ ("/home/seankwon/.emacs.d/" (21175 7603 445136 576000) "user.el" "places" "starter-kit-defuns.el" "COPYING" "backups/" "../" ".git/" "init.el" "changelog.md" "auto-save-list/" "tar.sh" "starter-kit-pkg.el" ".gitignore" "python-mode.el" "nrepl-history" "starter-kit.el" "vendor/" "./" ".smex-items" "modules/" "README.markdown" "themes/" "starter-kit-misc.el" "elpa/")
+
+ ("/home/seankwon/code/gitPlayground/4clojure/src/foreclojure/" (21167 25395 936239 6000) "login.clj" "core.clj" "graphs.clj" "mongo.clj" "static.clj" "utils.clj" "golf.clj" "register.clj" "../" "solutions.clj" "datatable.clj" "config.clj" "ring.clj" "version_utils.clj" "data_set.clj" "settings.clj" "api.clj" "periodic.clj" "version.clj" "template.clj" "messages.clj" "./" "ring_utils.clj" "users.clj" "problems.clj" "social.clj" "git.clj" "feeds.clj")
+
+ ("/home/seankwon/code/gitPlayground/4clojure/" (21167 29363 368826 388000) "target/" "resources/" "LICENSE.html" "README.md" "../" ".git/" "test/" ".gitignore" "load-data.bat" "src/" "./" "project.clj" "load-data.sh" "4clojure.sh")
+
+ ("/home/seankwon/code/" (21167 25519 169826 858000) "javascripts/" "data-structures/" "gitPlayground/" "clojures/" "rubies/" "../" "rails/" "latex/" "cPlusPlus/" "./" "pythons/" "sparks/" "cCode/")
+
+ ("/home/seankwon/Desktop/" (21167 41445 543813 368000) "../" "./")
+
+ ("/home/seankwon/code/gitPlayground/4clojure/src/" (21158 40520 330336 908000) "foreclojure/" "../" "./")
+
+ ("/home/seankwon/code/javascripts/projects/" (21038 39279 505410 65000) "book-site/" "artsy/" "sand-backbone/" "twitter-client/" "backbone-bootstrap/" "../" "chat-server/" "./")
+
+ ("/home/seankwon/code/javascripts/" (21060 54750 921591 943000) "lib/" "projects/" "../" "./")
+
+ ("/home/seankwon/code/rubies/" (21133 47123 613601 185000) "webserver/" "../" "fibP.rb" "./")
+
+ ("/home/seankwon/code/gitPlayground/payroll/public/javascripts/" (21149 7562 807105 79000) "bootstrap.min.js" "main.js" "../" "./" "underscore-min.js" "jquery-2.0.3.min.js" "backbone-min.js" "bootstrap.js")
+
+ ("/home/seankwon/code/gitPlayground/payroll/public/" (21045 53219 383603 82000) "javascripts/" "images/" "fonts/" "../" "./" "stylesheets/")
+
+ ("/home/seankwon/code/gitPlayground/payroll/" (21133 47064 869600 302000) "lib/" "app.js" "README.md" "../" ".git/" ".gitignore" "node_modules/" "public/" "./" "package.json")
+
+ ("/home/seankwon/code/gitPlayground/" (21166 3868 943453 477000) "portfolio/" "clojure-koans/" "MediumClone/" "unmetneedsroundtable/" "brave-clojure-web/" "SPR2/" "../" "payroll/" "ahmadeus_sqlite/" "nyu_politics_society_website/" "ahmadeus/" "./" "sparkteam/" "4clojure/")
+
+ ("/home/seankwon/code/cPlusPlus/cPrimer/stringbad/" (21078 60613 643060 131000) "Makefile" "../" "strngbad.h" "./" "strngbad.cpp")
+
+ ("/home/seankwon/code/cPlusPlus/cPrimer/" (21078 60938 507052 834000) "cow/" "../" "test/" "./" "stringbad/")
+
+ ("/home/seankwon/code/cPlusPlus/" (21069 55774 443929 487000) "cPrimer/" "../" "./" "sdl/")
+
+ ("/home/seankwon/code/data-structures/Assignment7/Assignment7/" (21166 35744 170462 41000) "SortedMap.java" "CWSolution.class" "Test2.class" "notes.txt" "TestHarness.class" "TestHarness.java" "BSTMapInorderIterator.class" "SortedMap.class" "CWSpeedTest.class" "../" "BSTMapNode.class" "BSTMap.java" "SortedMapException.class" "FileParser.java" "TWL06.txt" "Test.class" "FileParser.class" "Datastructures.docx" "Test1.java" "Test2.java" "Test1.class" "Test3.class" "./" "BSTMapNode.java" "SortedMapException.java" "CWSolution.java" "BSTMap.class" "BSTMapInorderIterator.java" "CWSpeedTest.java" "Test3.java" "Test.java")
+
+ ("/home/seankwon/code/data-structures/Assignment7/" (21165 8630 721899 990000) "Assignment7/" "../" "./" "Assignment7.zip")
+
+ ("/home/seankwon/code/data-structures/Assignment1-SeanKwon-shk472/" (21072 59772 18532 267000) "Test8.java" "SortedSetNode.class" "Test19.class" "Collection.java" "Set.class" "SortedSet.java" "Test6.class" "Test4.java" "Test2.class" "Test15.class" "TestHarness.class" "TestHarness.java" "SortedSet.class" "Test8.class" "Test14.class" "SortedSetNode.java" "sortedlist.ml" "Test5.java" "Test15.java" "Test12.java" "Test16.java" "Test9.class" "Set.java" "../" "Test13.java" "Test10.class" "Test19.java" "Test11.class" "Test9.java" "Test.class" "Test4.class" "SortedSetException.java" "Test10.java" "Test17.java" "Test12.class" "Test13.class" "Test1.java" "Test18.class" "Test10.java~" "Test2.java" "Test1.class" "Test5.class" "Test18.java" "Test16.class" "Test3.class" "./" "Test17.java~" "Test6.java" "Test11.java" "Collection.class" "Test17.class" "Test14.java" "Test7.class" "Test3.java" "SortedSetException.class" "Test7.java" "Test.java")
+
+ ("/home/seankwon/code/data-structures/" (21162 39069 359050 168000) "Assignment2/" "Assignment7/" "Assignment3/" "../" "midterm/" "Assignment5/" "Assignment1-SeanKwon-shk472/" "./" "Assignment4/" "Assignment6/")
+
+ ("/home/seankwon/.emacs.d/modules/" (21166 4486 215439 612000) "starter-kit-js.el" "starter-kit-lisp.el" "../" "starter-kit-perl.el" "starter-kit-ruby.el" "./" "starter-kit-eshell.el" "starter-kit-bindings.el")
+
+ ("/home/seankwon/code/clojures/practice/prac_project/src/" (21152 65055 988804 424000) "../" "prac_project/" "./")
+
+ ("/home/seankwon/code/clojures/practice/" (21152 65055 980804 424000) "../" "prac_project/" "prac1.clj" "./")
+
+ ("/home/seankwon/code/clojures/" (21162 325 113236 168000) "leins/" "../" "clojure-1.5.1/" "practice/" "./")
+
+ ("/home/seankwon/code/pythons/" (21142 18038 686981 201000) "prac_files/" "util/" "../" "misc/" "./")
+
+ ("/home/seankwon/code/gitPlayground/brave-clojure-web/" (21166 4006 971450 378000) "config.yaml" "lib/" "compass/" "code/" "Gemfile" "convert.sh" "README.md" "../" ".git/" "crash.log" ".gitignore" "Rules" ".sass-cache/" "./" "output/" "Guardfile" "layouts/" "Gemfile.lock" "org/" "tmp/" "content/")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

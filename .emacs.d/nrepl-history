@@ -1,0 +1,877 @@
+;; -*- coding: utf-8-unix -*-
+;; Automatically written history of nREPL session
+;; Edit at your own risk
+
+("(count (filter #(= 0 %) (find-suns (vec fl-century) 0)))" "(filter #(= 0 %) (find-suns (vec fl-century) 0))" "(find-suns (vec fl-century) 0)" "(defn find-suns [coll index]
+  (lazy-seq
+   (when (not= index (dec (count coll)))
+     (let [first-m (find-first-v2 coll index)]
+      (cons first-m (find-suns (assoc coll (inc index) first-m) (inc index)))))))" "fl-century" "portion" "(mod 36 7)" "(find-suns portion 0)" "(def portion (take 13 fl-century))" "(take 12 fl-century)" "(mod 35 7)" "(find-suns fl-century 0)" "(find-first-v2 fl-century 1)" "(find-first-v2 fl-century 0)
+      " "(find-suns fl-century 0)" "fl-century" "fl" "(def fl-century (conj (flatten century) 2))" "(doc conj)" "(mod (+ 5 28) 7)" "(mod (+ 2 31) 7)" "(mod (+ 33 28) 7)" "fl-century" "(find-suns fl-century 0)" "(def fl-century (assoc (vec (flatten century)) 0 33))" "(find-suns fl-century 0)" "(def fl-century (flatten century))" "(defn fl-century (flatten century))" "(first century)" "(mod (+ 33 28) 7)" "(take 7 fl-century)" "(fl-century)" "(mod 33 7)" "(find-first-v2 fl-century 1)" "(find-first-v2 fl-century 2)" "(find-first-v2 fl-century 0)" "(take 12 (find-suns fl-century 0))" "(take 7 (find-suns fl-century 0))" "(find-suns fl-century 0)" "(defn find-suns [coll index]
+        (lazy-seq
+         (when (not= index (dec (count coll)))
+           (cons (find-first-v2 coll index) (find-suns coll (inc index))))))" "(find-suns fl-century 0)" "(defn find-suns [coll index]
+        (lazy-seq
+         (when (not= index (count coll))
+           (cons (find-first-v2 coll index) (find-suns coll (inc index))))))" "fl-century" "(count fl-century)" "(find-first-v2 fl-century 1)" "(find-first-v2 fl-century 0)" "(defn find-first-v2 [coll index]
+        (mod (+ (nth coll index) (nth coll (inc index))) 7))" "(defn find-first-v2 [index]
+        (mod (+ (nth index (inc index)) 7)))" "(nth nin 0)" "nin" "(pop! fl-century)" "(pop fl-century)" "(def fl-century (assoc (vec (flatten century)) 0 2))" "(def fl-century (assoc (vec (flatten century)) 0 2
+                             ))" "(assoc fl-century 0 2)" "fl-century" "(def fl-century (vec (flatten century)))" "(assoc (vec fl-century) 0 2)" "(assoc fl-century 0 2)" "(def fl-century (flatten century))" "(flatten century)" "century" "(find-first 31 2)" "(defn find-first [prev num-months]
+        (mod (+ prev num-months) 7))" "(defn find-first
+        (mod (+ a b) 7))" "(mod 36 7)" "(mod 33 7)" "(mod 25 7)" "(mod 33 7)" "(def nin (first century))" "(first century)" "days-in-weeks" "(def days-in-weeks {1 true, 2 false, 3 false, 4 false, 5 false, 6 false, 7 false
+                           })" "(defn days-in-weeks {1 true, 2 false, 3 false, 4 false, 5 false, 6 false, 7 false
+                           })" "(zipmap (range 1 8) true)" "(int (/ 31 7))" "(int (/ 29 7))" "(mod 29 7)" "(- 31 2)" "(- 31 3)" "(mod 28 7)" "century" "days-in-year" "century" "(defn days-in-months [leap]
+  (if (true? leap)
+    [31 29 31 30 31 30 31 31 30 31 30 31]
+    [31 28 31 30 31 30 31 31 30 31 30 31]))
+
+(def century
+  (map days-in-months (map #(zero? (mod % 4)) (range 1901 2001))))
+
+(def days-in-year (map #(reduce + %) century))
+" "(def data [[75]
+           [95 64]
+           [17 47 82]
+           [18 35 87 10]
+           [20  4 82 47 65]
+           [19  1 23 75  3 34]
+           [88  2 77 73  7 63 67]
+           [99 65  4 28  6 16 70 92]
+           [41 41 26 56 83 40 80 70 33]
+           [41 48 72 33 47 32 37 16 94 29]
+           [53 71 44 65 25 43 91 52 97 51 14]
+           [70 11 33 28 77 73 17 78 39 68 17 57]
+           [91 71 52 38 17 14 91 43 58 50 27 29 48]
+           [63 66 4 68 89 53 67 30 73 16 69 87 40 31]
+           [4 62 98 27 23  9 70 98 73 93 38 53 60 4 23]])
+
+(defn merge-rows [a b]
+  (map + (map #(apply max %) (partition 2 1 a)) b))
+
+(reduce merge-rows (reverse data))
+" "(reduce merge-rows (reverse routes))" "(map + (map #(apply max %) (partition 2 1 [18 35 87 10])) [20 4 82 47 65])" "(map #(apply max %) (partition 2 1 [18 35 87 10]))" "(partition 2 1 [18 35 87 10])" "(partition 2 1 [95 64])" "(partition 2 1 (range 20))" "(doc partition)" "(doc +)" "(doc reduce)" "(doc partition)" "clean" "(connect-vertex 8 1)" "(connect-vertex 5 1)" "(connect-vertex 3 1)" "(connect-vertex 0 1)" "(def raw-pyramid (reverse (vector 75 95 64 17 47 82 18 35 87 10 20 4 82 47 65 19 
+                                  1 23 75 03 34 88 2 77 73 7 63 67 99 65 04 28 6 
+                                  16 70 92 41 41 26 56 83 40 80 70 33 41 48 72 
+                                  33 47 32 37 16 94 29 53 71 44 65 25 43 91 52 
+                                  97 51 14 70 11 33 28 77 73 17 78 39 68 17 57 
+                                  91 71 52 38 17 14 91 43 58 50 27 29 48 63 66 
+                                  4 68 89 53 67 30 73 16 69 87 40 31 4 62 98 
+                                  27 23 9 70 98 73 93 38 53 60 4 23)))
+
+;;convert the raw elements into a convertible map
+(defn vec->py-map [p]
+  (loop [n 15 c 0 mapped-p {}]
+    (if (= n 0)
+      mapped-p
+      (recur (dec n)
+             (if (= n 15) 15 (+ c n)) 
+             (assoc mapped-p
+               (- 15 (dec n))
+               (vec (reverse (take n (drop c p)))))))))
+
+(def py-map (vec->py-map raw-pyramid))
+
+;;Graph methods for djikstra
+(defstruct vertex :val :R :L)
+(defn connect-vertex [pos row]
+  (let [find-el (fn [p r] (nth (get py-map r) p nil))]
+    (cond
+     (= 15 row)                (struct-map vertex
+                                 :val (find-el 15 0)
+                                 :R nil
+                                 :L nil)
+     (and (= 0 pos)
+          (not= row 15))       (struct-map vertex
+                                 :val (find-el pos row)
+                                 :R (doall (connect-vertex 0 (inc row)))
+                                 :L nil)
+     (= nil (find-el row pos)) (struct-map vertex
+                                 :val (find-el (dec pos) row)
+                                 :R nil
+                                 :L (doall (connect-vertex (dec pos) (inc row))))
+     :else                     (struct-map vertex
+                                 :val (find-el row pos)
+                                 :R (doall (connect-vertex pos (inc row)))
+                                 :L (doall (connect-vertex (dec pos) (inc row)))))))
+" "(map #(connect-vertex % 1) (range 0 15))" "(connect-vertex 2 1)" "(connect-vertex 14 1)" "(connect-vertex 0 1)" "(defn connect-vertex [pos row]
+  (let [find-el (fn [p r] (nth (get py-map r) p nil))]
+    (cond
+     (= 15 row)                {:val (find-el 15 0)
+                                :R nil
+                                :L nil}
+     (and (= 0 pos)
+          (not= row 15))        {:val (find-el pos row)
+                                :R (doall (connect-vertex 0 (inc row)))
+                                :L nil}
+     (= nil (find-el row pos)) {:val (find-el (dec pos) row)
+                                :R nil
+                                :L (doall (connect-vertex (dec pos) (inc row)))}
+     :else                     {:val (find-el row pos)
+                                :R (doall (connect-vertex pos (inc row)))
+                                :L (doall (connect-vertex (dec pos) (inc row)))})))
+" "(connect-vertex 0 1)" "(defn connect-vertex [pos row]
+  (let [find-el (fn [p r] (nth (get py-map r) p nil))]
+    (cond
+     (= 15 row)                {:val (find-el 15 0)
+                                :R nil
+                                :L nil}
+     (and (= 0 pos)
+          (not row 15))        {:val (find-el pos row)
+                                :R (doall (connect-vertex 0 (inc row)))
+                                :L nil}
+     (= nil (find-el row pos)) {:val (find-el (dec pos) row)
+                                :R nil
+                                :L (doall (connect-vertex (dec pos) (inc row)))}
+     :else                     {:val (find-el row pos)
+                                :R (doall (connect-vertex pos (inc row)))
+                                :L (doall (connect-vertex (dec pos) (inc row)))})))" "(connect-vertex 1 1)" "(connect-vertex 0 1)" "(connect-vertex 0 0)" "(connect-vertex 0 15)" "(defn connect-vertex [pos row]
+  (let [find-el (fn [p r] (nth (get py-map r) p nil))]
+    (cond
+     (= 15 row)                {:val (find-el 0 15)
+                                :R nil
+                                :L nil}
+     (and (= 0 pos)
+          (not= row 15))        {:val (find-el pos row)
+                                :R (doall (connect-vertex 0 (inc row)))
+                                :L nil}
+     (= nil (find-el row pos)) {:val (find-el (dec pos) row)
+                                :R nil
+                                :L (doall (connect-vertex (dec pos) (inc row)))}
+     :else                     {:val (find-el row pos)
+                                :R (doall (connect-vertex (inc pos) (inc row)))
+                                :L (doall (connect-vertex pos (inc row)))})))" "(connect-vertex 0 15)" "(defn connect-vertex [pos row]
+  (let [find-el (fn [p r] (nth (get py-map r) p nil))]
+    (cond
+     (= 15 row)                {:val (find-el 15 0)
+                                :R nil
+                                :L nil}
+     (and (= 0 pos)
+          (not= row 15))        {:val (find-el pos row)
+                                :R (doall (connect-vertex 0 (inc row)))
+                                :L nil}
+     (= nil (find-el row pos)) {:val (find-el (dec pos) row)
+                                :R nil
+                                :L (doall (connect-vertex (dec pos) (inc row)))}
+     :else                     {:val (find-el row pos)
+                                :R (doall (connect-vertex (inc pos) (inc row)))
+                                :L (doall (connect-vertex pos (inc row)))})))" "(connect-vertex 0 15)" "(defn connect-vertex [pos row]
+  (let [find-el (fn [p r] (nth (get py-map r) p nil))]
+    (cond
+     (= 15 row)                {:val (find-el 15 0)
+                                :R nil
+                                :L nil}
+     (and (= 0 pos)
+          (not= row 15))        {:val (find-el pos row)
+                                :R (doall (connect-vertex 0 (inc row)))
+                                :L nil}
+     (= nil (find-el row pos)) {:val (find-el (dec pos) row)
+                                :R nil
+                                :L (doall (connect-vertex (dec pos) (inc row)))}
+     :else                     {:val (find-el row pos)
+                                :R (doall (connect-vertex (inc pos) (inc row)))
+                                :L (doall (connect-vertex pos (inc row)))})))" "(connect-vertex 0 15)" "(defn connect-vertex [pos row]
+  (let [find-el (fn [p r] (nth (get py-map r) p nil))]
+    (cond
+     (= 15 row)                {:val (find-el 15 0)
+                                :R nil
+                                :L nil}
+     (and (= 0 pos)
+          (not row 15))        {:val (find-el pos row)
+                                :R (doall (connect-vertex 0 (inc row)))
+                                :L nil}
+     (= nil (find-el row pos)) {:val (find-el (dec pos) row)
+                                :R nil
+                                :L (doall (connect-vertex (dec pos) (inc row)))}
+     :else                     {:val (find-el row pos)
+                                :R (doall (connect-vertex (inc pos) (inc row)))
+                                :L (doall (connect-vertex pos (inc row)))})))" "(connect-vertex 0 15)" "(defn connect-vertex [pos row]
+  (let [find-el (fn [p r] (nth (get py-map r) p nil))]
+   (cond
+   (= 15 row)                {:val (find-el 15 0)
+                              :R nil
+                              :L nil}
+   (= 0 pos)                 {:val (find-el pos row)
+                              :R (doall (connect-vertex 0 (inc row)))
+                              :L nil})
+   (= nil (find-el row pos)) {:val (find-el (dec pos) row)
+                              :R nil
+                              :L (doall (connect-vertex (dec pos) (inc row)))}
+   :else                     {:val (find-el row pos)
+                              :R (doall (connect-vertex (inc pos) (inc row)))
+                              :L (doall (connect-vertex pos (inc row)))}))" "(= 15 15)" "(finder 0 15)" "(defn finder [p r] (nth (get py-map r) p nil))" "py-map" "(nth (get py-map 15) 0)" "(connect-vertex 0 15)" "(connect-vertex 0 1)" "(defn connect-vertex [pos row]
+  \"pos row\"
+  (let [find-el (fn [p r] (nth (get py-map r) p nil))]
+   (cond
+   (= 15 row)                {:val (find-el 15 0)
+                              :R nil
+                              :L nil}
+   (= 0 pos)                 {:val (find-el pos row)
+                              :R (doall (connect-vertex 0 (inc row)))
+                              :L nil})
+   (= nil (find-el row pos)) {:val (find-el (dec pos) row)
+                              :R nil
+                              :L (doall (connect-vertex (dec pos) (inc row)))}
+   :else                     {:val (find-el row pos)
+                              :R (doall (connect-vertex (inc pos) (inc row)))
+                              :L (doall (connect-vertex pos (inc row)))}))
+" "(connect-vertex 0 15)" "(defn connect-vertex [pos row]
+  \"pos row\"
+  (let [find-el (fn [p r] (nth (get py-map r) p nil))]
+   (cond
+   (= 15 row)                {:val (find-el 15 0)
+                              :R nil
+                              :L nil}
+   (= 0 pos)                 {:val (find-el pos row)
+                              :R (doall (connect-vertex 0 (inc row)))
+                              :L nil})
+   (= nil (find-el row pos)) {:val (find-el (dec pos) row)
+                              :R nil
+                              :L (doall (connect-vertex (dec pos) (inc row)))}
+   :else                     {:val (find-el row pos)
+                              :R (doall (connect-vertex (inc pos) (inc row)))
+                              :L (doall (connect-vertex pos (inc row)))}))
+    " "(connect-vertex 0 1)" "(defn connect-vertex [pos row]
+  \"pos row\"
+  (let [find-el (fn [p r] (nth (get py-map r) p nil))]
+   (cond
+   (= 15 row)                {:val (find-el 15 0)
+                              :R nil
+                              :L nil}
+   (= 0 pos)                 {:val (find-el pos row)
+                              :R (doall #(connect-vertex 0 (inc row)))
+                              :L nil})
+   (= nil (find-el row pos)) {:val (find-el (dec pos) row)
+                              :R nil
+                              :L (doall #(connect-vertex (dec pos) (inc row)))}
+   :else                     {:val (find-el row pos)
+                              :R (doall #(connect-vertex (inc pos) (inc row)))
+                              :L (doall #(connect-vertex pos (inc row)))}))
+    " "(connect-vertex 1 14)" "(defn connect-vertex [pos row]
+  \"pos row\"
+  (let [find-el (fn [p r] (nth (get py-map r) p nil))]
+   (cond
+   (= 15 row)                {:val (find-el 15 0)
+                              :R nil
+                              :L nil}
+   (= 0 pos)                 {:val (find-el pos row)
+                              :R (doall (connect-vertex 0 (inc row)))
+                              :L nil})
+   (= nil (find-el row pos)) {:val (find-el (dec pos) row)
+                              :R nil
+                              :L (doall (connect-vertex (dec pos) (inc row)))}
+   :else                     {:val (find-el row pos)
+                              :R (doall (connect-vertex (inc pos) (inc row)))
+                              :L (doall (connect-vertex pos (inc row)))}))
+    " "(connect-vertex 0 1)" "(defn connect-vertex [pos row]
+  \"pos row\"
+  (let [find-el (fn [p r] (nth (get py-map r) p nil))]
+   (cond
+   (= 15 row)                {:val (find-el 15 0)
+                              :R nil
+                              :L nil}
+   (= 0 pos)                 {:val (find-el row pos)
+                              :R (doall (connect-vertex 0 (inc row)))
+                              :L nil})
+   (= nil (find-el row pos)) {:val (find-el (dec pos) row)
+                              :R nil
+                              :L (doall (connect-vertex (dec pos) (inc row)))}
+   :else                     {:val (find-el row pos)
+                              :R (doall (connect-vertex (inc pos) (inc row)))
+                              :L (doall (connect-vertex pos (inc row)))}))
+" "(connect-vertex 1 14)" "(connect-vertex 0 12)" "(connect-vertex 2 12)" "(connect-vertex 3 12)" "(defn connect-vertex [pos row]
+  \"pos row\"
+  (let [find-el (fn [p r] (nth (get py-map r) p nil))]
+   (cond
+   (= 15 row)                {:val (find-el 15 0)
+                              :R nil
+                              :L nil}
+   (= 0 pos)                 {:val (find-el row pos)
+                              :R (connect-vertex 0 (inc row))
+                              :L nil})
+   (= nil (find-el row pos)) {:val (find-el (dec pos) row)
+                              :R nil
+                              :L (connect-vertex (dec pos) (inc row))}
+   :else                     {:val (find-el row pos)
+                              :R (connect-vertex (inc pos) (inc row))
+                              :L (connect-vertex pos (inc row))}))
+" "(defn connect-vertex [pos row]
+  \"pos row\"
+  (let [find-el (fn [p r] (nth (get py-map r) p nil))]
+   (cond
+   (= 15 row)                {:val (find-el 15 0)
+                              :R nil
+                              :L nil}
+   (= 0 pos)                 {:val (find-el row pos)
+                              :R (recur 0 (inc row))
+                              :L nil})
+   (= nil (find-el row pos)) {:val (find-el (dec pos) row)
+                              :R nil
+                              :L (recur (dec pos) (inc row))}
+   :else                     {:val (find-el row pos)
+                              :R (recur (inc pos) (inc row))
+                              :L (recur pos (inc row))}))" "(connect-vertex 0 1)" "(defn connect-vertex [pos row]
+  \"pos row\"
+  (let [find-el (fn [p r] (nth (get py-map r) p nil))]
+   (cond
+   (= 15 row)                {:val (find-el 15 0)
+                              :R nil
+                              :L nil}
+   (= 0 pos)                 {:val (find-el row pos)
+                              :R (connect-vertex 0 (inc row))
+                              :L nil})
+   (= nil (find-el row pos)) {:val (find-el (dec pos) row)
+                              :R nil
+                              :L (connect-vertex (dec pos) (inc row))}
+   :else                     {:val (find-el row pos)
+                              :R (connect-vertex (inc pos) (inc row))
+                              :L (connect-vertex pos (inc row))}))" "py-map
+" "(nth (get py-map 2) 14 nil)" "(nth (get py-map 2) 13 nil)" "(nil? (nth (get py-map 2) 13))" "(nil? (nth (get py-map 2) 14))" "(nth (get py-map 2) 14)" "(nth (get py-map 2) 15)" "(get py-map 2)" "(nth (get py-map 2) 0)" "(first (vals py-map))" "(take 1 (vals py-map))" "(map val->vertex (take-while (not= nil?) (vals py-map)))" "(map val->vertex (vals py-map))" "(apply val->vertex (vals py-map))" "(zipmap (range 1 (count (vals py-map))) (vals py-map))" "(vals py-map)" "(map val->vertex (vals py-map))" "(map val->vertex (keys py-map))" "(map val->vertex py-map)" "(map val-vertex py-map)" "(map val->vertex (get py-map 1))" "py-map" "(def raw-pyramid (reverse (vector 75 95 64 17 47 82 18 35 87 10 20 4 82 47 65 19 
+                                  1 23 75 03 34 88 2 77 73 7 63 67 99 65 04 28 6 
+                                  16 70 92 41 41 26 56 83 40 80 70 33 41 48 72 
+                                  33 47 32 37 16 94 29 53 71 44 65 25 43 91 52 
+                                  97 51 14 70 11 33 28 77 73 17 78 39 68 17 57 
+                                  91 71 52 38 17 14 91 43 58 50 27 29 48 63 66 
+                                  4 68 89 53 67 30 73 16 69 87 40 31 4 62 98 
+                                  27 23 9 70 98 73 93 38 53 60 4 23)))
+
+;;convert the raw elements into a convertible map
+(defn vec->py-map [p]
+  (loop [n 15 c 0 mapped-p {}]
+    (if (= n 0)
+      mapped-p
+      (recur (dec n)
+             (if (= n 15) 15 (+ c n)) 
+             (assoc mapped-p
+               (- 15 (dec n))
+               (vec (reverse (take n (drop c p)))))))))
+
+(def py-map (vec->py-map raw-pyramid))
+
+;;Graph methods for djikstra
+(defn val->vertex
+  ([]               {:left nil, :val nil, :right nil})
+  ([val]            {:left nil, :val val, :right nil})
+  ([left val right] {:left left, :val val, :right right}))
+" "(get p-map 1)" "(doc get)" "(vec (map vertex (p-map 1)))" "(map vertex (p-map 1))" "(defn vertex
+  ([val]
+     {:left nil, :val val, :right nil})
+  ([left val right]
+     {:left left, :val val, :right right}))" "(defn vertex [left val right]
+  {:left left, :val val, :right right})" "(p-map 1)" "p-map" "
+(def raw-pyramid (reverse (vector 75 95 64 17 47 82 18 35 87 10 20 4 82 47 65 19 
+                                  1 23 75 03 34 88 2 77 73 7 63 67 99 65 04 28 6 
+                                  16 70 92 41 41 26 56 83 40 80 70 33 41 48 72 
+                                  33 47 32 37 16 94 29 53 71 44 65 25 43 91 52 
+                                  97 51 14 70 11 33 28 77 73 17 78 39 68 17 57 
+                                  91 71 52 38 17 14 91 43 58 50 27 29 48 63 66 
+                                  4 68 89 53 67 30 73 16 69 87 40 31 4 62 98 
+                                  27 23 9 70 98 73 93 38 53 60 4 23)))
+
+;;convert the raw elements into a convertible map
+(defn vec->pmap [p]
+  (loop [n 15 c 0 mapped-p {}]
+    (if (= n 0)
+      mapped-p
+      (recur (dec n)
+             (if (= n 15) 15 (+ c n)) 
+             (assoc mapped-p
+               (- 15 (dec n))
+               (vec (reverse (take n (drop c p)))))))))
+
+(def p-map (vec->pmap raw-pyramid))" "(def raw-pyramid (reverse (vector 75 95 64 17 47 82 18 35 87 10 20 4 82 47 65 19 
+                                  1 23 75 03 34 88 2 77 73 7 63 67 99 65 04 28 6 
+                                  16 70 92 41 41 26 56 83 40 80 70 33 41 48 72 
+                                  33 47 32 37 16 94 29 53 71 44 65 25 43 91 52 
+                                  97 51 14 70 11 33 28 77 73 17 78 39 68 17 57 
+                                  91 71 52 38 17 14 91 43 58 50 27 29 48 63 66 
+                                  4 68 89 53 67 30 73 16 69 87 40 31 4 62 98 
+                                  27 23 9 70 98 73 93 38 53 60 4 23)))
+
+;;convert the raw elements into a convertible map
+(defn vec->pmap [p]
+  (loop [n 15 c 0 mapped-p {}]
+    (if (= n 0)
+      mapped-p
+      (recur (dec n)
+             (if (= n 15) 15 (+ c n)) 
+             (assoc mapped-p
+               (- 15 (dec n))
+               (vec (reverse (take n (drop c p)))))))))
+
+(def p-map (convert-to-pmap raw-pyramid))
+" "(make-vertex (make-vertex nil 5 nil) 10 (make-vertex nil 39 nil))" "(defn make-vertex [left val right] 
+        {:left left, :val val, :right right})" "(doc recur)" "(recur)" "(convert-to-pmap raw-pyramid
+                       
+                       )" "(defn convert-to-pmap [p]
+  (loop [n 15 c 0 mapped-p {}]
+    (if (= n 0)
+      mapped-p
+      (recur (dec n)
+             (if (= n 15) 15 (+ c n)) 
+             (assoc mapped-p (- 15 (dec n))
+                        (vec (reverse (take n (drop c p)))))))))" "(def raw-pyramid (reverse (vector 75 95 64 17 47 82 18 35 87 10 20 4 82 47 65 19 
+                                  1 23 75 03 34 88 2 77 73 7 63 67 99 65 04 28 6 
+                                  16 70 92 41 41 26 56 83 40 80 70 33 41 48 72 
+                                  33 47 32 37 16 94 29 53 71 44 65 25 43 91 52 
+                                  97 51 14 70 11 33 28 77 73 17 78 39 68 17 57 
+                                  91 71 52 38 17 14 91 43 58 50 27 29 48 63 66 
+                                  4 68 89 53 67 30 73 16 69 87 40 31 4 62 98 
+                                  27 23 9 70 98 73 93 38 53 60 4 23)))" "mapped-p" "raw-pyramid" "(def raw-pyramid (reverse (vector 75 95 64 17 47 82 18 35 87 10 20 4 82 47 65 19 1 23 75 3 34 88 02 77 73 07 63 67 99 65 04 28 06 16 70 92 41 41 26 56 83 40 80 70 33 41 48 72 33 47 32 37 16 94 29 53 71 44 65 25 43 91 52 97 51 14 70 11 33 28 77 73 17 78 39 68 17 57 91 71 52 38 17 14 91 43 58 50 27 29 48 63 66)))
+
+(defn convert-to-pmap [p]
+  (loop [n 15 c 0 mapped-p {}]
+    (if (= n 0)
+      mapped-p
+      (recur (dec n)
+             (if (= n 15) 15 (+ c n)) 
+             (assoc mapped-p (- 15 (dec n))
+                    (map #(vector %2 %1)
+                         (reverse (take n (drop c p))) (range)))))))
+
+(def mapped-p (convert-to-pmap raw-pyramid))" "(defn convert-to-pmap [p]
+  (loop [n 15 c 0 mapped-p {}]
+    (if (= n 0)
+      mapped-p
+      (recur (dec n) 
+             (if (= n 15) 15 (+ c n)) 
+             (assoc mapped-p (- 15 (dec n)) (map #(vector %2 %1) (reverse (take n (drop c p))) (range)))))))" "mapped-p" "(mapped-p)" "(def raw-pyramid (reverse (vector 75 95 64 17 47 82 18 35 87 10 20 4 82 47 65 19 1 23 75 3 34 88 02 77 73 07 63 67 99 65 04 28 06 16 70 92 41 41 26 56 83 40 80 70 33 41 48 72 33 47 32 37 16 94 29 53 71 44 65 25 43 91 52 97 51 14 70 11 33 28 77 73 17 78 39 68 17 57 91 71 52 38 17 14 91 43 58 50 27 29 48 63 66)))
+
+(defn convert-to-pmap [p]
+  (loop [n 15 c 0 mapped-p {}]
+    (if (= n 0)
+      mapped-p
+      (recur (dec n)
+             (if (= n 15) 15 (+ c n)) 
+             (assoc mapped-p (- 15 (dec n))
+                    (map #(vector %2 %1)
+                         (reverse (take n (drop c p))) (range)))))))
+
+(def mapped-p (convert-to-pmap raw-pyramid))" "(defn convert-to-pmap [p]
+  (loop [n 15 c 0 mapped-p {}]
+    (if (= n 0)
+      mapped-p
+      (recur (dec n) 
+             (if (= n 15) 15 (+ c n)) 
+             (assoc mapped-p (- 15 (dec n)) (map #(vector %2 %1) (reverse (take n (drop c p))) (range)
+                                                 ))))))" "(convert-to-pmap raw-pyramid)" "(defn convert-to-pmap [p]
+  (loop [n 15 c 0 mapped-p {}]
+    (if (= n 0)
+      mapped-p
+      (recur (dec n) 
+             (if (= n 15) 15 (+ c n)) 
+             (assoc mapped-p (- 15 (dec n)) (map #(vector %2 %1) (reverse (take n (drop c p))) (range)
+                                                 ))))))" "(defn convert-to-pmap [p]
+  (loop [n 15 c 0 mapped-p {}]
+    (if (= n 0)
+      mapped-p
+      (recur (dec n) 
+             (if (= n 15) 15 (+ c n)) 
+             (assoc mapped-p (- 15 (dec n)) (reverse (take n (drop c p))))))))" "(walk val (map #(mapped-p %) (range)) mapped-p)" "(use 'clojure.walk)" "(walk
+       )" "(require 'clojure.walk)" "(doc walk)" "(when (nil? (map #(mapped-p %) (range)))
+        (map #(vector %2 %1) (mapped-p 2) (range)))" "(map #(mapped-p %) (range 1 17))" "(map #(mapped-p %) (range 1 16))" "(map #(mapped-p %) (range 1 15))" "(map #(mapped-p %) (range))" "(map #(vector %2 %1) (mapped-p 2) (range))" "(mapped-p 16)" "(map #(vector %2 %1) (mapped-p 2) (range))" "(map #(vector %1 %2) (mapped-p 2) (range))" "(mapped-p 2)" "(mapped-p 1)" "mapped-p" "(def mapped-p (pyramid-map raw-pyramid))" "(def mapped-p (convert-to-pmap raw-pyramid))" "(pyramid-map raw-pyramid)" "(defn pyramid-map [p]
+        (loop [n 15 c 0 mapped-p {}]
+          (if (= n 0)
+            mapped-p
+            (recur (dec n) 
+                   (if (= n 15) 15 (+ c n)) 
+                   (assoc mapped-p (- 15 (dec n)) (reverse (take n (drop c p))))))))" "(pyramid-map raw-pyramid)" "(defn pyramid-map [p]
+        (loop [n 15 c 0 mapped-p {}]
+          (if (= n 0)
+            mapped-p
+            (recur (dec n) 
+                   (if (= n 15) 0 (+ c n)) 
+                   (assoc mapped-p (- 15 (dec n)) (reverse (take n (drop c p))))))))" "raw-pyramid" "(pyramid-map raw-pyramid)" "(defn pyramid-map [p]
+        (loop [n 15 c 0 mapped-p {}]
+          (if (= n 0)
+            mapped-p
+            (recur (dec n) 
+                   (if (= n 15) 0 (+ c (dec n))) 
+                   (assoc mapped-p (- 15 (dec n)) (reverse (take n (drop c p))))))))" "(pyramid-map raw-pyramid)" "(defn pyramid-map [p]
+        (loop [n 15 c 0 mapped-p {}]
+          (if (= n 0)
+            mapped-p
+            (recur (dec n) 
+                   (if (= n 15) 15 (+ c (dec n))) 
+                   (assoc mapped-p (- 15 (dec n)) (reverse (take n (drop c p))))))))" "(pyramid-map raw-pyramid)" "(defn pyramid-map [p]
+        (loop [n 15 c 0 mapped-p {}]
+          (if (= n 1)
+            mapped-p
+            (recur (dec n) 
+                   (if (= n 15) 15 (+ c (dec n))) 
+                   (assoc mapped-p (- 15 (dec n)) (reverse (take n (drop c p))))))))" "(assoc {} 1 (reverse (take 15 (drop 0 raw-pyramid))))" "(pyramid-map raw-pyramid)" "(defn pyramid-map [p]
+        (loop [n 15 mapped-p {} c 0]
+          (if (= n 1)
+            mapped-p
+            (recur (dec n) 
+                   (if (= n 15) 15 (+ c (dec n))) 
+                   (assoc mapped-p (- 15 (dec n)) (reverse (take n (drop c p))))))))" "(reverse (take 14 (drop 15 raw-pyramid)))" "(reverse (take 15 raw-pyramid))" "(take 15 raw-pyramid)" "(def raw-pyramid 
+   (reverse (vector 75 95 64 17 47 82 18 35 87 10 20 4 82 47 65 19 1 23 75 3 34 88 02 77 73 07 63 67 99 65 04 28 06 16 70 92 41 41 26 56 83 40 80 70 33 41 48 72 33 47 32 37 16 94 29 53 71 44 65 25 43 91 52 97 51 14 70 11 33 28 77 73 17 78 39 68 17 57 91 71 52 38 17 14 91 43 58 50 27 29 48 63 66 04 68 89 53 67 30 73 16 69 87 40 31 04 62 98 27 23 9 70 98 73 93 38 53 60 04 23)))" "(def raw-pyramid 
+        (vector 75
+95 64
+17 47 82
+18 35 87 10
+20 4 82 47 65
+19 1 23 75 3 34
+88 02 77 73 07 63 67
+99 65 04 28 06 16 70 92
+41 41 26 56 83 40 80 70 33
+41 48 72 33 47 32 37 16 94 29
+53 71 44 65 25 43 91 52 97 51 14
+70 11 33 28 77 73 17 78 39 68 17 57
+91 71 52 38 17 14 91 43 58 50 27 29 48
+63 66 04 68 89 53 67 30 73 16 69 87 40 31
+04 62 98 27 23 9 70 98 73 93 38 53 60 04 23))" "(take 15 raw-pyramid)" "(def raw-pyramid 
+        (vector 75
+95 64
+17 47 82
+18 35 87 10
+20 4 82 47 65
+19 1 23 75 3 34
+88 02 77 73 07 63 67
+99 65 04 28 06 16 70 92
+41 41 26 56 83 40 80 70 33
+41 48 72 33 47 32 37 16 94 29
+53 71 44 65 25 43 91 52 97 51 14
+70 11 33 28 77 73 17 78 39 68 17 57
+91 71 52 38 17 14 91 43 58 50 27 29 48
+63 66 04 68 89 53 67 30 73 16 69 87 40 31
+04 62 98 27 23 9 70 98 73 93 38 53 60 04 23))" "(take 15 raw-pyramid)" "{1 [[1 4] [2 4]] 2 [[4 2] [2 5] [2 6]]}" "(def raw-pyramid 
+        (vector 75
+95 64
+17 47 82
+18 35 87 10
+20 4 82 47 65
+19 1 23 75 3 34
+88 02 77 73 07 63 67
+99 65 04 28 06 16 70 92
+41 41 26 56 83 40 80 70 33
+41 48 72 33 47 32 37 16 94 29
+53 71 44 65 25 43 91 52 97 51 14
+70 11 33 28 77 73 17 78 39 68 17 57
+91 71 52 38 17 14 91 43 58 50 27 29 48
+63 66 04 68 89 53 67 30 73 16 69 87 40 31
+04 62 98 27 23 9 70 98 73 93 38 53 60 04 23))" "(vector 75
+95 64
+17 47 82
+18 35 87 10
+20 4 82 47 65
+19 1 23 75 3 34
+88 02 77 73 07 63 67
+99 65 04 28 06 16 70 92
+41 41 26 56 83 40 80 70 33
+41 48 72 33 47 32 37 16 94 29
+53 71 44 65 25 43 91 52 97 51 14
+70 11 33 28 77 73 17 78 39 68 17 57
+91 71 52 38 17 14 91 43 58 50 27 29 48
+63 66 04 68 89 53 67 30 73 16 69 87 40 31
+04 62 98 27 23 9 70 98 73 93 38 53 60 04 23)" "(str 75
+95 64
+17 47 82
+18 35 87 10
+20 4 82 47 65
+19 1 23 75 3 34
+88 02 77 73 07 63 67
+99 65 04 28 06 16 70 92
+41 41 26 56 83 40 80 70 33
+41 48 72 33 47 32 37 16 94 29
+53 71 44 65 25 43 91 52 97 51 14
+70 11 33 28 77 73 17 78 39 68 17 57
+91 71 52 38 17 14 91 43 58 50 27 29 48
+63 66 04 68 89 53 67 30 73 16 69 87 40 31
+04 62 98 27 23 9 70 98 73 93 38 53 60 04 23)" "(str 75
+95 64
+17 47 82
+18 35 87 10
+20 4 82 47 65
+19 1 23 75 3 34
+88 02 77 73 07 63 67
+99 65 04 28 06 16 70 92
+41 41 26 56 83 40 80 70 33
+41 48 72 33 47 32 37 16 94 29
+53 71 44 65 25 43 91 52 97 51 14
+70 11 33 28 77 73 17 78 39 68 17 57
+91 71 52 38 17 14 91 43 58 50 27 29 48
+63 66 04 68 89 53 67 30 73 16 69 87 40 31
+04 62 98 27 23 09 70 98 73 93 38 53 60 04 23)" "(str 75
+95 64
+17 47 82
+18 35 87 10
+20 4 82 47 65
+19 1 23 75 03 34
+88 02 77 73 07 63 67
+99 65 04 28 06 16 70 92
+41 41 26 56 83 40 80 70 33
+41 48 72 33 47 32 37 16 94 29
+53 71 44 65 25 43 91 52 97 51 14
+70 11 33 28 77 73 17 78 39 68 17 57
+91 71 52 38 17 14 91 43 58 50 27 29 48
+63 66 04 68 89 53 67 30 73 16 69 87 40 31
+04 62 98 27 23 09 70 98 73 93 38 53 60 04 23)" "(vector 4 62 98 27 23 9 70 98 73 93 38 53 60 04 23)" "(vector 4 62 98 27 23 09 70 98 73 93 38 53 60 04 23)" "(vector 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23)" "(vector 4 62 98 27 23 9 70 98 73 93 38 53 60 04 23)" "(vector 4 62 98 27 23 9 70 98 73 93 38 53 60 4 23)" "(str 75
+95 64
+17 47 82
+18 35 87 10
+20 04 82 47 65
+19 01 23 75 03 34
+88 02 77 73 07 63 67
+99 65 04 28 06 16 70 92
+41 41 26 56 83 40 80 70 33
+41 48 72 33 47 32 37 16 94 29
+53 71 44 65 25 43 91 52 97 51 14
+70 11 33 28 77 73 17 78 39 68 17 57
+91 71 52 38 17 14 91 43 58 50 27 29 48
+63 66 04 68 89 53 67 30 73 16 69 87 40 31
+04 62 98 27 23 09 70 98 73 93 38 53 60 04 23)" "(str 04)" "(string 04)" "(def row (vector 4 62 98 27 23 9 70 98 73 93 38 53 60 4 23))" "(vector 4 62 98 27 23 9 70 98 73 93 38 53 60 4 23)" "(vector 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23
+              )" "(vector 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23)" "(def row (vector 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23))" "(def row-one (vec 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23))" "(def row-one (vector 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23))" "(def row-one [04 62 98 27 23 09 70 98 73 93 38 53 60 04 23])" "(def pyramid (vector 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23 63 66 04 68 89 53 67 30 73 16 69 87 40 31 91 71 52 38 17 14 91 43 58 50 27 29 48 70 11 33 28 77 73 17 78 39 68 17 57 53 71 44 65 25 43 91 52 97 51 14 41 48 72 33 47 32 37 16 94 29 41 41 26 56 83 40 80 70 33 99 65 04 28 06 16 70 92 88 02 77 73 07 63 67 19 01 23 75 03 34 20 04 82 47 65 18 35 87 10 17 47 82 95 64 75)
+        )" "(def pyramid (vector 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23 63 66 04 68 89 53 67 30 73 16 69 87 40 31 91 71 52 38 17 14 91 43 58 50 27 29 48 70 11 33 28 77 73 17 78 39 68 17 57 53 71 44 65 25 43 91 52 97 51 14 41 48 72 33 47 32 37 16 94 29 41 41 26 56 83 40 80 70 33 99 65 04 28 06 16 70 92 88 02 77 73 07 63 67 19 01 23 75 03 34 20 04 82 47 65 18 35 87 10 17 47 82 95 64 75))" "(def pyramid (vector 75 95 64 17 47 82 18 35 87 10 20 04 82 47 65 19 01 23 75 03 34 88 02 77 73 07 63 67 99 65 04 28))" "(def pyramid (vector 75 95 64 17 47 82 18 35 87 10 20 04 82 47 65 19 01 23 75 03 34 88 02 77 73 07 63 67 99 65 04 28 06 16 70 92 41 41 26 56 83 40 80 70 33 41 48 72 33 47 32 37 16 94 29 53 71 44 65 25 43 91 52 97 51 14 70 11 33 28 77 73 17 78 39 68 17 57 91 71 52 38 17 14 91 43 58 50 27 29 48 63 66 04 68 89 53 67 30 73 16 69 87 40 31 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23))" "(def pyramid [75 95 64 17 47 82 18 35 87 10 20 04 82 47 65 19 01 23 75 03 34 88 02 77 73 07 63 67 99 65 04 28 06 16 70 92 41 41 26 56 83 40 80 70 33 41 48 72 33 47 32 37 16 94 29 53 71 44 65 25 43 91 52 97 51 14 70 11 33 28 77 73 17 78 39 68 17 57 91 71 52 38 17 14 91 43 58 50 27 29 48 63 66 04 68 89 53 67 30 73 16 69 87 40 31 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23])" "(def pyramid [75
+95 64
+17 47 82
+18 35 87 10
+20 04 82 47 65
+19 01 23 75 03 34
+88 02 77 73 07 63 67
+99 65 04 28 06 16 70 92
+41 41 26 56 83 40 80 70 33
+41 48 72 33 47 32 37 16 94 29
+53 71 44 65 25 43
+                    ))" "(def pyramid [75
+95 64
+17 47 82
+18 35 87 10
+20 04 82 47 65
+19 01 23 75 03 34
+88 02 77 73 07 63 67
+99 65 04 28 06 16 70 92
+41 41 26 56 83 40 80 70 33
+41 48 72 33 47 32 37 16 94 29
+53 71 44 65 25 43 91 52 97 51 14
+70 11 33 28 77 73 17 78 39 68 17 57
+91 71 52 38 17 14 91 43 58 50 27 29 48
+63 66 04 68 89 53 67 30 73 16 69 87 40 31
+04 62 98 27 23 09 70 98 73 93 38 53 60 04 23])" "(vector 75 95 64 17 47 82 18 35 87 10 20 04 82 47 65 19 01 23 75 03 34 88 02 77 73 07 63 67 99 65 04 28 06 16 
+                            70 92 41 41 26 56 83 40 80 70 33 41 48 72 33 47 32 37 16 94 29 53 71 44 65 25 43 91 52 97 51 14 70 11 
+                            33 28 77 73 17 78 39 68 17 57 91 71 52 38 17 14 91 43 58 50 27 29 48 63 66 04 68 89 53 67 30 73 16 69 
+                            87 40 31 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23)" "(def elements (vector 75 95 64 17 47 82 18 35 87 10 20 04 82 47 65 19 01 23 75 03 34 88 02 77 73 07 63 67 99 65 04 28 06 16 
+                            70 92 41 41 26 56 83 40 80 70 33 41 48 72 33 47 32 37 16 94 29 53 71 44 65 25 43 91 52 97 51 14 70 11 
+                            33 28 77 73 17 78 39 68 17 57 91 71 52 38 17 14 91 43 58 50 27 29 48 63 66 04 68 89 53 67 30 73 16 69 
+                            87 40 31 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23))" "(def elements (vector 75 95 64 17 47 82 18 35 87 10 20 04 82 47 65 19 01 23 75 03 34 88 02 77 73 07 63 67 99 65 04 28 06 16 70 92 41 41 26 56 83 40 80 70 33 41 48 72 33 47 32 37 16 94 29 53 71 44 65 25 43 91 52 97 51 14 70 11 33 28 77 73 17 78 39 68 17 57 91 71 52 38 17 14 91 43 58 50 27 29 48 63 66 04 68 89 53 67 30 73 16 69 87 40 31 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23))" "(def elements '(75 95 64 17 47 82 18 35 87 10 20 04 82 47 65 19 01 23 75 03 34 88 02 77 73 07 63 67 99 65 04 28 06 16 70 92 41 41 26 56 83 40 80 70 33 41 48 72 33 47 32 37 16 94 29 53 71 44 65 25 43 91 52 97 51 14 70 11 33 28 77 73 17 78 39 68 17 57 91 71 52 38 17 14 91 43 58 50 27 29 48 63 66 04 68 89 53 67 30 73 16 69 87 40 31 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23))" "(def elements [75 95 64 17 47 82 18 35 87 10 20 04 82 47 65 19 01 23 75 03 34 88 02 77 73 07 63 67 99 65 04 28 06 16 70 92 41 41 26 56 83 40 80 70 33 41 48 72 33 47 32 37 16 94 29 53 71 44 65 25 43 91 52 97 51 14 70 11 33 28 77 73 17 78 39 68 17 57 91 71 52 38 17 14 91 43 58 50 27 29 48 63 66 04 68 89 53 67 30 73 16 69 87 40 31 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23])" "(def avec [3])" "(def pyra [75 95 64 17 47 82 18 35 87 10 20 04 82 47 65 19 01 23 75 03 34 88 02 77 73 07 63 67 99 65 04 28 06 16 70 92 41 41 26 56 83 40 80 70 33 41 48 72 33 47 32 37 16 94 29 53 71 44 65 25 43 91 52 97 51 14 70 11 33 28 77 73 17 78 39 68 17 57 91 71 52 38 17 14 91 43 58 50 27 29 48 63 66 04 68 89 53 67 30 73 16 69 87 40 31 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23])" "(def pyramid [75 95 64 17 47 82 18 35 87 10 20 04 82 47 65 19 01 23 75 03 34 88 02 77 73 07 63 67 99 65 04 28 06 16 70 92 41 41 26 56 83 40 80 70 33 41 48 72 33 47 32 37 16 94 29 53 71 44 65 25 43 91 52 97 51 14 70 11 33 28 77 73 17 78 39 68 17 57 91 71 52 38 17 14 91 43 58 50 27 29 48 63 66 04 68 89 53 67 30 73 16 69 87 40 31 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23])" "(def pyramid [75
+95 64
+17 47 82
+18 35 87 10
+20 04 82 47 65
+19 01 23 75 03 34
+88 02 77 73 07 63 67
+99 65 04 28 06 16 70 92
+41 41 26 56 83 40 80 70 33
+41 48 72 33 47 32 37 16 94 29
+53 71 44 65 25 43 91 52 97 51 14
+70 11 33 28 77 73 17 78 39 68 17 57
+91 71 52 38 17 14 91 43 58 50 27 29 48
+63 66 04 68 89 53 67 30 73 16 69 87 40 31
+04 62 98 27 23 09 70 98 73 93 38 53 60 04 23])" "(vec (map #(list %1 %2) (range 0 5) '(4 5 9 5 9)))" "(vec (map #(vector %1 %2) (range 0 5) '(4 5 9 5 9)))" "(map #(vec %1 %2) (range 0 5) '(4 5 9 5 9))" "(map #(vector %1 %2) (range 0 5) '(4 5 9 5 9))" "(map assoc (range 0 5) '(4 5 9 5 9))" "(map assoc' (range 0 5) '(4 5 9 5 9))" "(map {} (range 0 5) '(4 5 9 5 9))" "(map #(assoc {}  %1 %2) (range 0 5) '(4 5 9 5 9))" "(map #(assoc %1 %2) (range 0 5) '(4 5 9 5 9))" "(map #(hash-map %1 %2) (range 0 5) '(4 5 9 5 9))" "(map #(hash-mao %1 %2) (range 0 5) '(4 5 9 5 9))" "(map #({} %1 %2) (range 0 5) '(4 5 9 5 9))" "(map #(vector %1 %2) (range 0 5) '(4 5 9 5 9))" "(map #([%1 %2]) (range 0 5) '(4 5 9 5 9))" "(map #(%1 %2) (range 0 5) '(4 6 3 9 7))" "(mod 500 130)" "(rem 500 130)" "(range 1 1001)" "range 1 1001)" "(converter '(:one :two :three))" "(converter '(:one :two))" "(convert '(:one :two))" "(defn converter [aseq]
+        (reduce + (map count 
+                       (map name aseq))))" "(defn converter [aseq]
+        (reduce + (map count 
+                       (map name aseq)))
+        )" "(def one-to-nine (map name '(:one :two :three :four :five :six :seven :eight :nine)))
+(def num-ch-one-to-nine (reduce + (map count one-to-nine)))
+
+(def teens (map name '(:eleven :twelve :thirteen :fourteen :fifteen :sixteen :seventeen :eighteen :nineteen)))
+(def num-teens (reduce + (map count teens)))
+
+(def two-digits (map name '(:ten :twenty :thirty :forty :fifty :sixty :seventy :eighty :ninety)))
+(def num-two-digits (reduce + (map count two-digits)))
+
+(def one-thousand (count \"onethousand\"))
+(def and-adder 3)
+(def hundred (count \"hundred\"))" "all-nums" "(def all-nums
+        (+ (* 810 num-ch-one-to-nine)
+           (* 90 num-teens)
+           (* 980 num-two-digits)
+           (* (- 1000 81) and-adder)
+           (* 899 hundred)))" "(def and-adder 3)" "all-nums" "(def all-nums
+        (+ (* 810 num-ch-one-to-nine)
+           (* 90 num-teens)
+           (* 980 num-two-digits)
+           (* (- 1000 81) and-adder)
+           (* 899 hundred)))" "(def all-nums
+        (+' (*' 810 num-ch-one-to-nine)
+           (*' 90 num-teens)
+           (*' 980 num-two-digits)
+           (*' (1000 - 181) and-adder)
+           (*' 899 hundred)))" "(def all-nums
+        (+ (* 810 num-ch-one-to-nine)
+           (* 90 num-teens)
+           (* 980 num-two-digits)
+           (* (1000 - 181) and-adder)
+           (* 899 hundred)))" "(count (range 100 999))" "(100 999)" "hundred" "(def hundred (count \"hundred\"))" "(range 1 101)" "(range 10 101)" "(range 20 101)" "(range 1 1001)" "(count (filter #(not= % 0) (map #(mod % 100) (range 1 1001))))" "(mod 11 10)" "(count (filter #(not= % 0) (map #(mod % 100) (range 1 1001))))" "(count (filter #(not= % 0) (map #(mod % 10) (range 1 1001))))" "(mod 860 10)" "(mod 540 100)" "(count (filter #(= % 0) (map #(mod % 10) (range 1 1001))))" "(mod 11 10)" "(range 1 1001)" "(range 1 10)" "and-adder" "(def and-adder 27)" "one-thousand" "(def one-thousand (count \"onethousand\"))" "num-two-digits" "(def num-two-digits (reduce + (map count two-digits)))" "(def two-digits (map name '(:twenty :thirty :forty :fifty :sixty :seventy :eighty :ninety)))" "(def num-two-digits (reduce + (map count two-digits)))" "(def two-digits '(:twenty :thirty :forty :fifty :sixty :seventy :eighty :ninety))" "num-teens" "(def num-teens (reduce + (map count teens)))" "(def teens (map name '(:eleven :twelve :thirteen :fourteen :fifteen :sixteen :seventeen :eighteen :nineteen)))" "num-ch-one-to-nine" "(def num-ch-one-to-nine (reduce + (map count one-to-nine)))" "(reduce + (map count one-to-nine))" "(def one-to-nine (map name '(:one :two :three :four :five :six :seven :eight :nine)))" "(count \"fdsa\")" "(def one-to-nine (map name '(:one :two :three :four :five :six :seven :eight :nine)))" "(def one-to-nineteen (map name '(:one :two :three :four :five :six :seven :eight :nine :ten
+             :eleven :twelve :thirteen :fourteen :fifteen :sixteen :seventeen :eighteen :nineteen)))" "(map name '(:one :two :three :four :five :six :seven :eight :nine :ten
+             :eleven :twelve :thirteen :fourteen :fifteen :sixteen :seventeen :eighteen :nineteen))" "'(:one :two :three :four :five :six :seven :eight :nine :ten
+             :eleven :twelve :thirteen :fourteen :fifteen :sixteen :seventeen :eighteen :nineteen)" "(def one-through-nineteen)" "(reduce + (map read-string (pop (apply list all-nums))))" "(map read-string (pop (apply list all-nums)))" "(pop (apply list all-nums))" "(apply list all-nums)" "(doc list*)" "(list* all-nums)" "(pop (list* all-nums))" "(pop (list* all-nums)))" "(map read-string (pop (list* all-nums)))" "(map int (pop (list* all-nums)))" "(map char (pop (list* all-nums)))" "(list* all-nums)" "'(all-nums)" "(all-nums)" "'(all-nums)" "(list all-nums)" "(reverse all-nums)" "(pop all-nums)" "all-nums" "(pop (reverse all-nums))" "(pop all-nums)" "(map char all-nums)" "(map int all-nums)" "(def all-nums (clojure.string/split (str (expo 2 1000)) #\"\"))" "(clojure.string/split (str (expo 2 1000)) #\"\")" "(clojure.string/split (str (expo 2 1000)) #\"\"))" "(clojure.string/split (str (expo 2 1000) #\"\"))" "(str (expo 2 1000))" "(defn expo [n x]
+        (reduce *' (repeat x n)))" "(expo 2 1000)" "(defn expo [n x]
+        (reduce *' (repeat x n)))" "(expo 2 1000)" "(expo 2 5)" "(defn expo [n x]
+        (reduce * (repeat x n)))" "(long (binomial 40 20))" "(int (binomial 4 2))" "(long (binomial 40 20))" "(int (binomial 40 20))" "(binomial 40 20)" "(defn binomial [n k]
+  (let [n-ex (reduce *' (range 1 (inc n)))
+             k-ex (reduce *' (range 1 (inc k)))
+             nk-ex (reduce *' (range 1 (inc (- n k))))]
+    (/ n-ex (*' k-ex nk-ex))))" "(binomial 40 20)" "(defn binomial [n k]
+  (let [n-ex (reduce *' (range 1 (inc n)))
+             k-ex (reduce *' (range 1 (inc k)))
+             nk-ex (reduce *' (range 1 (inc (- n k))))]
+    (bigint (/ n-ex (* k-ex nk-ex)))))" "(/ (reduce *' (range 20 41)) (reduce *' (range 1 21)))" "(reduce *' (range 20 41))" "(/ (reduce * (range 20 41)) (reduce * (range 1 21)))" "(long (reduce * (range 20 41)))" "(biginteger (reduce * (range 20 41)))" "(reduce * (range 20 41))" "(reduce * (range 40 20))" "(biginteger (* 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1))" "(bigint (* 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1))" "(bigin (* 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1))" "(long (* 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1))" "(* 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1)" "(* 40 39 28 18 482 49)" "(map long (range 1 40))" "(long (reduce * (map long (range 1 40))))" "(long (reduce * (apply long (range 1 40))))" "(long (reduce * (range 1 40))
+            )" "(doc long)" "(/ (reduce * (range 1 40)) (reduce * (range 1 20)))" "(bigint (reduce * (range 1 (bigint 40))))" "(bigint (reduce * (range 1 40))
+              )" "(reduce * (range 1 30))" "(reduce * (range 1 40))" "(binomial 40 20)" "(defn binomial [n k]
+  (let [n-ex (reduce * (range 1 (inc n)))
+             k-ex (reduce * (range 1 (inc k)))
+             nk-ex (reduce * (range 1 (inc (- n k))))]
+    (bigint (/ n-ex (* k-ex nk-ex)))))" "(binomial 40 20)" "(binomial 20 20)" "(defn binomial [n k]
+  (let [n-ex (reduce * (range 1 (inc n)))
+             k-ex (reduce * (range 1 (inc k)))
+             nk-ex (reduce * (range 1 (inc (- n k))))]
+    (/ n-ex (* k-ex nk-ex))))" "(reduce * (range 1 11))" "(reduce * 1 11)" "(range 1 10)" "(.indexOf collatz-seq 525)" "(apply max collatz-seq)" "(def collatz-seq (map collatz (range 1 1000000)))" "(inc 837299)" "(.indexOf collatz-seq 525)" "(def collatz-seq (map collatz (range 500 1000000)))" "(apply max (map collatz (range 100 1000000)))" "(defn collatz [n]
+        (loop [c 0 n n] 
+          (cond
+           (= n 1)       (inc c)
+           (even? n)     (recur (inc c) (/ n 2))
+           :else         (recur (inc c) (+ 1 (* 3 n))))))
+         " "(bigint 5)" "(apply max (map collatz (range 100 1000000)))" "(defn collatz [n]
+        (loop [c 0 n n] 
+          (cond
+           (= n 1)       (inc c)
+           (even? n)     (recur (inc c) (int (/ n 2)))
+           :else         (recur (inc c) (+ 1 (* 3 n))))))
+         " "(collatz 13)" "(defn collatz [n]
+        (loop [c 0 n n] 
+          (cond
+           (= n 1)       c
+           (even? n)     (recur (inc c) (int (/ n 2)))
+           :else         (recur (inc c) (+ 1 (* 3 n))))))
+         " "(collatz 13)" "(defn collatz [n]
+        (loop [c 0] 
+          (cond
+           (= n 1)   c
+           (even? n) (do (inc c) (recur (int (/ n 2))))
+           :else     (do (inc c) (recur (+ 1 (* 3 n)))))))
+         " "(defn collatz [n]
+        (cond
+         (= n 1)   n
+         (even? n) (recur (int (/ n 2)))
+         :else     (recur (+ 1 (* 3 n)))))
+         " "py-trip" "(def py-trip
+        (let [m (rand 100) n (rand 100)
+              sq (fn [x] (* x x))]
+          (loop [m m n n]
+            (let [a (- (sq m) (sq n))
+                  b (* 2 m n)
+                  c (+ (sq m) (sq n))]
+              (if (= 1000 (+ a b c))
+                (* a b c)
+                (recur (int (rand 100)) (int (rand 100))))))))" "py-trip" "(def py-trip
+        (let [m (rand 100) n (rand 100)
+              sq (fn [x] (* x x))]
+          (loop [m m n n]
+            (let [a (- (sq m) (sq n))
+                  b (* 2 m n)
+                  c (+ (sq m) (sq n))]
+              (if (= 1000 (+ a b c))
+                (* a b c)
+                (recur (int (rand 100)) (int (rand 100))))))))" "py-trip" "(def py-trip
+        (let [m (rand 100) n (rand 100)
+              sq (fn [x] (* x x))]
+          (loop [m m n n]
+            (let [a (- (sq m) (sq n))
+                  b (* 2 m n)
+                  c (+ (sq m) (sq n))]
+              (if (= 1000 (+ a b c))
+                (* a b c)
+                (recur (int (rand 100)) (int (rand 100))))))))" "py-trip" "(py-trip)" "(def py-trip
+        (let [m (rand 100) n (rand 100)
+              sq (fn [x] (* x x))]
+          (loop [m m n n]
+            (let [a (- (sq m) (sq n))
+                  b (* 2 m n)
+                  c (+ (sq m) (sq n))]
+              (if (= 1000 (+ a b c))
+                '(a b c)
+                (recur (int (rand 100)) (int (rand 100))))))))" "(def py-trip
+        (let [m (rand 100) n (rand 100)
+              sq (fn [x] (* x x))]
+          (loop [m m n n]
+            (let [a (- (sq m) (sq n))
+                  b (* 2 m n)
+                  c (+ (sq m) (sq n))]
+              (if (= 1000 (+ a b c))
+                '(a b c)
+                (recur (rand 100) (rand 100)))))))" "(rand 100)" "(doc quot)" "(* rand 100.0)" "(* rand 100)" "(rand)" "(def py-trip
+        (let [m (* rand 100) n (* rand 100)
+              sq (fn [x] (* x x))]
+          (loop [m m n n]
+            (let [a (- (sq m) (sq n))
+                  b (* 2 m n)
+                  c (+ (sq m) (sq n))]
+              (if (= 1000 (+ a b c))
+                '(a b c)
+                (recur (* rand 100) (* rand 100)))))))" "(doc rand)" "(Math/rand
+       )" "(finder 5 12 13)" "(finder 16 30 34)" "(finder 15 20 25)" "(finder 12 16 20)" "(finder 9 12 15)" "(finder 10 24 26)" "(finder 36 64 100)" "(finder 6 8 10)" "(finder 9 16 25)" "(finder 9 15 25)" "(finder 7 24 25)" "(finder 9 40 41)" "(finder 8 15 17)" "(finder 5 12 13)" "(defn finder [x y z]
+        (+ (* x x) (* y y) (* z z)))" "(+ 625 256 81)" "(* 25 25)" "(* 16 16)" "(* 9 9)" "(* 30 30)" "(* 20 20)" "(* 90 90)" "(* 10 10)" "(* 100 100)" "(/ 1000 5)" "(loop [series series products '()]
+        (if (<= (count series) 5)
+          (apply max products)
+          (recur (rest series) (cons (reduce * (take 5 series)) products))))" "(loop [series series products '()]
+        (if (<= (count series) 5)
+          (apply max products)
+          (recur (rest series) (cons (reduce + (take 5 series)) products))))" "(loop [series series products '()]
+        (if (<= (count series) 5)
+          (apply max products)
+          (recur (rest series) (cons (reduce + (take 5 series))))))" "(cons 1 '())" "(def series [7 3 1 6 7 1 7 6 5 3 1 3 3 0 6 2 4 9 1 9 2 2 5 1 1 9 6 7 4 4 2 6 5 7 4 7 4 2 3 5 5 3 4 9 1 9 4 9 3 4
+             9 6 9 8 3 5 2 0 3 1 2 7 7 4 5 0 6 3 2 6 2 3 9 5 7 8 3 1 8 0 1 6 9 8 4 8 0 1 8 6 9 4 7 8 8 5 1 8 4 3
+             8 5 8 6 1 5 6 0 7 8 9 1 1 2 9 4 9 4 9 5 4 5 9 5 0 1 7 3 7 9 5 8 3 3 1 9 5 2 8 5 3 2 0 8 8 0 5 5 1 1
+             1 2 5 4 0 6 9 8 7 4 7 1 5 8 5 2 3 8 6 3 0 5 0 7 1 5 6 9 3 2 9 0 9 6 3 2 9 5 2 2 7 4 4 3 0 4 3 5 5 7
+             6 6 8 9 6 6 4 8 9 5 0 4 4 5 2 4 4 5 2 3 1 6 1 7 3 1 8 5 6 4 0 3 0 9 8 7 1 1 1 2 1 7 2 2 3 8 3 1 1 3
+             6 2 2 2 9 8 9 3 4 2 3 3 8 0 3 0 8 1 3 5 3 3 6 2 7 6 6 1 4 2 8 2 8 0 6 4 4 4 4 8 6 6 4 5 2 3 8 7 4 9
+             3 0 3 5 8 9 0 7 2 9 6 2 9 0 4 9 1 5 6 0 4 4 0 7 7 2 3 9 0 7 1 3 8 1 0 5 1 5 8 5 9 3 0 7 9 6 0 8 6 6
+             7 0 1 7 2 4 2 7 1 2 1 8 8 3 9 9 8 7 9 7 9 0 8 7 9 2 2 7 4 9 2 1 9 0 1 6 9 9 7 2 0 8 8 8 0 9 3 7 7 6
+             6 5 7 2 7 3 3 3 0 0 1 0 5 3 3 6 7 8 8 1 2 2 0 2 3 5 4 2 1 8 0 9 7 5 1 2 5 4 5 4 0 5 9 4 7 5 2 2 4 3
+             5 2 5 8 4 9 0 7 7 1 1 6 7 0 5 5 6 0 1 3 6 0 4 8 3 9 5 8 6 4 4 6 7 0 6 3 2 4 4 1 5 7 2 2 1 5 5 3 9 7
+             5 3 6 9 7 8 1 7 9 7 7 8 4 6 1 7 4 0 6 4 9 5 5 1 4 9 2 9 0 8 6 2 5 6 9 3 2 1 9 7 8 4 6 8 6 2 2 4 8 2
+             8 3 9 7 2 2 4 1 3 7 5 6 5 7 0 5 6 0 5 7 4 9 0 2 6 1 4 0 7 9 7 2 9 6 8 6 5 2 4 1 4 5 3 5 1 0 0 4 7 4
+             8 2 1 6 6 3 7 0 4 8 4 4 0 3 1 9 9 8 9 0 0 0 8 8 9 5 2 4 3 4 5 0 6 5 8 5 4 1 2 2 7 5 8 8 6 6 6 8 8 1
+             1 6 4 2 7 1 7 1 4 7 9 9 2 4 4 4 2 9 2 8 2 3 0 8 6 3 4 6 5 6 7 4 8 1 3 9 1 9 1 2 3 1 6 2 8 2 4 5 8 6
+             1 7 8 6 6 4 5 8 3 5 9 1 2 4 5 6 6 5 2 9 4 7 6 5 4 5 6 8 2 8 4 8 9 1 2 8 8 3 1 4 2 6 0 7 6 9 0 0 4 2
+             2 4 2 1 9 0 2 2 6 7 1 0 5 5 6 2 6 3 2 1 1 1 1 1 0 9 3 7 0 5 4 4 2 1 7 5 0 6 9 4 1 6 5 8 9 6 0 4 0 8
+             0 7 1 9 8 4 0 3 8 5 0 9 6 2 4 5 5 4 4 4 3 6 2 9 8 1 2 3 0 9 8 7 8 7 9 9 2 7 2 4 4 2 8 4 9 0 9 1 8 8
+             8 4 5 8 0 1 5 6 1 6 6 0 9 7 9 1 9 1 3 3 8 7 5 4 9 9 2 0 0 5 2 4 0 6 3 6 8 9 9 1 2 5 6 0 7 1 7 6 0 6
+             0 5 8 8 6 1 1 6 4 6 7 1 0 9 4 0 5 0 7 7 5 4 1 0 0 2 2 5 6 9 8 3 1 5 5 2 0 0 0 5 5 9 3 5 7 2 9 7 2 5
+             7 1 6 3 6 2 6 9 5 6 1 8 8 2 6 7 0 4 2 8 2 5 2 4 8 3 6 0 0 8 2 3 2 5 7 5 3 0 4 2 0 7 5 2 9 6 3 4 5 0])" "(sieve 100)" "(defn sieve [n]
+        (let [p_primes (range 2 (inc n))
+              potential 2
+              div? (fn [n d] (= 0 (rem n d)))]
+          (loop [p_primes p_primes potential potential]
+            (if (>= potential (Math/sqrt n))
+              (last p_primes)
+              (recur (doall (filter #(div? % potential) p_primes))
+                     (first (take 1 (doall (filter #(div? % potential) p_primes)))))))))" "(first (take 11 (range 1 10)))" "(first (take 1 (range 1 10)))" "(first (take 0 (range 1 10)))" "(sieve 100)" "(defn sieve [n]
+        (let [p_primes (range 2 (inc n))
+              potential 2
+              div? (fn [n d] (= 0 (rem n d)))]
+          (loop [p_primes p_primes potential potential]
+            (if (>= potential (Math/sqrt n))
+              (last p_primes)
+              (recur (doall (filter #(div? % potential) p_primes))
+                     (take 0 (first (doall (filter #(div? % potential) p_primes)))))))))" "(sieve 100)" "(defn sieve [n]
+        (let [p_primes (range 2 (inc n))
+              potential 2
+              div? (fn [n d] (= 0 (rem n d)))]
+          (loop [p_primes p_primes potential potential]
+            (if (>= potential (Math/sqrt n))
+              (last p_primes)
+              (recur (doall (filter #(div? % potential) p_primes))
+                     (take (first (doall (filter #(div? % potential) p_primes)))))))))" "(int (take 1 (range 3 6)))" "'(take 1 (range 3 5)
+            )" "(take 1 (range 3 5)
+            )" "(defn sieve [n]
+        (let [p_primes (range 2 (inc n))
+              potential 2
+              div? (fn [n d] (= 0 (rem n d)))]
+          (loop [p_primes p_primes potential potential]
+            (if (>= potential (Math/sqrt n))
+              (last p_primes)
+              (recur (doall (filter #(div? % potential) p_primes))
+                     (next (doall (filter #(div? % potential) p_primes))))))))" "(sieve 92)" "(sieve 96)")
