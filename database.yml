@@ -1,0 +1,21 @@
+login: &login
+  adapter: postgresql
+  host: localhost
+  port: 5432
+
+development:
+  database: rh_development
+  username: <%= ENV['USER'] %>
+  <<: *login
+
+  staging:
+    database: rh_staging
+    <<: *login
+
+  production:
+    database: rh_production
+    <<: *login
+
+test:
+  database: rh_test
+  <<: *login
