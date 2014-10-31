@@ -52,5 +52,7 @@ endfunction
 "--------------------- end ----------------------------"
 
 "Configs for specific filetypes"
-au Filetype python setlocal tabstop=4 shiftwidth=4
+au Filetype python setlocal tabstop=4 shiftwidth=4 
+au Filetype javascript setlocal tabstop=2 shiftwidth=2 
 au Filetype c setlocal tabstop=4 shiftwidth=4
+au Filetype java setlocal tabstop=4 shiftwidth=4
